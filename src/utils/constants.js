@@ -21,5 +21,19 @@ export const STATS = [
   { label: "Years Of Experience", value: "2+" },
   { label: "Projects Completed", value: "5+" },
   { label: "Programming Languages", value: "3+" },
-  { label: "Client satisfaction", value: "98%" },
+  { label: "Client satisfaction", value: "N/A" },
+];
+
+export const About_STATS = [
+  { label: "Happy Clients", value: "N/A" },
+  { label: "Code Commits", value: "100+" },
+  { label: "GitHub Stars", value: "N/A" },
+];
+
+export const NAV_LINKS = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "services", label: "Services" },
+  { id: "contact", label: "Contact" },
 ];

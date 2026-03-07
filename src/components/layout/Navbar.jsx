@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Code, Menu, X } from "lucide-react";
+import { NAV_LINKS, Personal_info } from "../../utils/constants";
 
 const Navbar = () => {
+  const [isMenuOpen, setisMenuOpen] = useState(false);
+  const [isScrolled, setisScrolled] = useState(false);
+  const activeSection = useScrollSpy(NAV_LINKS.map((link) => link.id));
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setisScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavClick = (sectionId) => {
+    scrollToSection(sectionId);
+    setisMenuOpen(false);
+  };
+
   return <div>Navbar</div>;
 };
 
