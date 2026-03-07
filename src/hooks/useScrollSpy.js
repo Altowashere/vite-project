@@ -1,4 +1,4 @@
-import { useEffec, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useScrollSpy = (sectionIds, offset = 100) => {
   const [activeSection, setActiveSection] = useState("");
@@ -8,7 +8,7 @@ export const useScrollSpy = (sectionIds, offset = 100) => {
       const scrollPosition = window.scrollY + offset;
 
       //find the current section
-      for (let i = sectionIds - 1; i >= 0; i--) {
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
         const section = document.getElementById(sectionIds[i]);
         if (section) {
           const sectionTop = section.offsetTop;
@@ -27,7 +27,7 @@ export const useScrollSpy = (sectionIds, offset = 100) => {
 
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll, { postive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);

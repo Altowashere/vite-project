@@ -1,5 +1,3 @@
-import { LiaBell } from "react-icons/lia";
-
 export const Personal_info = {
   name: "A",
   title: "Programmer",

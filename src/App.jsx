@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "./components/layout/Navbar";
-import hero from "./components/sections/hero";
+import Hero from "./components/sections/Hero";
 
 const App = () => {
   return (
     <div className="min-h-screen bg-black">
       <Navbar />
       <main>
-        <hero />
+        <Hero />
       </main>
     </div>
   );
