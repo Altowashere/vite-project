@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
-import fadein from "./fadein";
+import fadeIn from "./fadein";
 
 const scrollReveal = (
   Children,
